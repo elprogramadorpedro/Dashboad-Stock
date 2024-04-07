@@ -1,11 +1,11 @@
-import { createContext, useState } from "react"; 
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types"
+import StockItem, { CATEGORIES } from "../entities/stockItem"
+import { useRef, useState } from "react"
+import useStock from "../hooks/useStock"
 
-export const StockContext = createContext({});
-
-StockContextProvider.propTypes = {
-  children: PropTypes.node,
-}; 
+ItemForm.propTypes = {
+  itemToUpdate: PropTypes.object
+}
 
 export default function ItemForm({ itemToUpdate }) {
   const defaultItem = {
@@ -14,35 +14,35 @@ export default function ItemForm({ itemToUpdate }) {
     quantity: 0,
     price: 0,
     category: ""
-  };
+  }
 
-  const [item, setItem] = useState(itemToUpdate ? itemToUpdate : defaultItem);
-  const { addItem, updateItem } = useStock();
-  const inputRef = useRef(null);
+  const [item, setItem] = useState(itemToUpdate ? itemToUpdate : defaultItem)
+  const { addItem, updateItem } = useStock()
+  const inputRef = useRef(null)
 
   const handleChange = (ev) => {
-    setItem((current) => ({ ...current, [ev.target.name]: ev.target.value }));
-  };
+    setItem((current) => ({ ...current, [ev.target.name]: ev.target.value }))
+  }
 
   const handleSubmit = (ev) => {
-    ev.preventDefault();
+    ev.preventDefault()
     try {
       if (itemToUpdate) {
-        updateItem(itemToUpdate.id, item);
-        alert("Item atualizado com sucesso!");
+        updateItem(itemToUpdate.id, item)
+        alert("Item atualizado com sucesso!")
       } else {
-        const validItem = new StockItem(item); 
-        addItem(validItem); 
-        setItem(defaultItem);
-        alert("Item cadastrado com sucesso!");
+        const validItem = new StockItem(item)
+        addItem(validItem)
+        setItem(defaultItem)
+        alert("Item cadastrado com sucesso!")
       }
     } catch (err) {
-      console.log(err.message);
-      alert("Ocorreu um erro.");
+      console.log(err.message)
+      alert("Ocorreu um erro.")
     } finally {
-      inputRef.current.focus();
+      inputRef.current.focus()
     }
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -79,7 +79,7 @@ export default function ItemForm({ itemToUpdate }) {
             name="price"
             id="price"
             required
-            min={0.00} 
+            min={0.00}
             step={0.01}
             value={item.price}
             onChange={handleChange}
@@ -122,5 +122,5 @@ export default function ItemForm({ itemToUpdate }) {
         Salvar
       </button>
     </form>
-  );
+  )
 }
