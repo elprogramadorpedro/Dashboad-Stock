@@ -12,11 +12,70 @@ This project is a stock dashboard designed to help businesses and individuals ef
 - **Friendly Interface**: A clear and simple user interface that facilitates inventory management.
 - **Responsive Design**: Compatible with mobile and desktop devices, ensuring access at any time and place.
 
+## Project architecture
+
+src/
+├── App.jsx                  
+├── index.css                
+├── main.jsx                
+├── router.jsx               
+├── components/              
+│   ├── DeleteButton.jsx     
+│   ├── ItemForm.jsx         
+│   ├── ItemsTable.jsx      
+├── contexts/                
+│   ├── stockContext.jsx     
+├── entities/                
+│   ├── stockItem.js         
+├── hooks/                   
+│   ├── useStock.jsx         
+├── pages/                   
+│   ├── Home.jsx             
+│   ├── RootLayout.jsx       
+│   ├── items/               
+│       ├── CreateItems.jsx  
+│       ├── Layout.jsx       
+│       ├── ListItems.jsx    
+│       ├── ShowItem.jsx     
+│       ├── UpdateItem.jsx   
+
+## Documentation
+
+| Directory/File                   | Description                                                               |
+|----------------------------------|---------------------------------------------------------------------------|
+| `src/`                           | Root directory for source files.                                          |
+| `src/App.jsx`                    | Main application component that sets up the router and context providers. |
+| `src/index.css`                  | Global stylesheet for the application.                                    |
+| `src/main.jsx`                   | Entry point of the application, initializes React app.                    |
+| `src/router.jsx`                 | Configures application routes using React Router.                         |
+| `src/components/`                | Contains reusable UI components.                                          |
+| `src/components/DeleteButton.jsx`| Button component for deleting items.                                      |
+| `src/components/ItemForm.jsx`    | Form component for adding or editing items.                               |
+| `src/components/ItemsTable.jsx`  | Table component to display items in a list.                               |
+| `src/contexts/`                  | Holds React context for state management.                                 |
+| `src/contexts/stockContext.jsx`  | Provides a context for stock management.                                  |
+| `src/entities/`                  | Contains models or entities used in the application.                      |
+| `src/entities/stockItem.js`      | Defines the stock item entity.                                            |
+| `src/hooks/`                     | Custom React hooks for shared logic across components.                    |
+| `src/hooks/useStock.jsx`         | Hook for accessing stock context functionality.                           |
+| `src/pages/`                     | Components representing different pages in the application.               |
+| `src/pages/Home.jsx`             | The home page component.                                                  |
+| `src/pages/RootLayout.jsx`       | Component for the root layout of the application.                         |
+| `src/pages/items/`               | Directory for item-related page components.                               |
+| `src/pages/items/CreateItems.jsx`| Page component for creating new items.                                    |
+| `src/pages/items/Layout.jsx`     | Layout component for item pages.                                          |
+| `src/pages/items/ListItems.jsx`  | Page component for listing all items.                                     |
+| `src/pages/items/ShowItem.jsx`   | Page component for showing a single item's details.                       |
+| `src/pages/items/UpdateItem.jsx` | Page component for updating an item.                                      |
+
+
+
 ## Technologies Used
 
 - [React](https://reactjs.org/): A JavaScript library for building user interfaces.
 - [Vite](https://vitejs.dev/): A new frontend build tool that significantly improves the development experience.
 - CSS: For styling and designing the user interface.
+- react-router-dom
 
 ## How to Install and Run
 
