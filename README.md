@@ -3,7 +3,7 @@
 ## Introduction
 
 This project is a stock dashboard designed to help businesses and individuals efficiently manage their product inventories. It enables the creation, listing, updating, and deletion of products, as well as their classification into categories. Developed using React, Vite, and CSS, it offers a user-friendly and reactive interface for smooth and effective inventory management.
-![image](https://github.com/elprogramadorpedro/Dashboard-Stock/assets/44806088/f30e0d89-c975-4aa5-9c3d-504be57a3716)
+![Group 316](https://github.com/elprogramadorpedro/Dashboad-Stock/assets/44806088/b5dd55d8-4037-4792-b217-547cdc0380f4)
 
 ## Features
 
