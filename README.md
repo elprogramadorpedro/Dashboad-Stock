@@ -3,6 +3,7 @@
 ## Introducción
 
 Este proyecto es un dashboard de stock diseñado para ayudar a las empresas y particulares a gestionar sus inventarios de productos de manera eficiente. Permite crear, listar, actualizar y eliminar productos, así como clasificarlos en categorías. Desarrollado utilizando React, Vite y CSS, ofrece una interfaz de usuario amigable y reactiva para una gestión de inventario fluida y efectiva.
+![image](https://github.com/elprogramadorpedro/Dashboad-Stock/assets/44806088/f30e0d89-c975-4aa5-9c3d-504be57a3716)
 
 ## Características
 
